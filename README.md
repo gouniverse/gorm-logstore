@@ -1,4 +1,4 @@
-# LogStore
+# Log Store
 
 ## Installation
 ```
