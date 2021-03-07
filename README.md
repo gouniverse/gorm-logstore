@@ -1,5 +1,7 @@
 # Log Store
 
+Logs messages to a database table.
+
 ## Installation
 ```
 go get -u github.com/gouniverse/logstore
