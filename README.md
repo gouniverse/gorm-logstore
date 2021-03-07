@@ -1,5 +1,21 @@
 # LogStore
 
+## Installation
+```
+go get -u github.com/gouniverse/logstore
+```
+
+## Setup
+
+```
+logStore = logstore.NewStore(metastore.WithGormDb(databaseInstance), metastore.WithTableName("log_meta"))
+```
+
+## Usage
+
+```
+logStore.Info("Hello")
+```
 
 
 # Log Levels
