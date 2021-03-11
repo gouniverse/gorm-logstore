@@ -74,7 +74,7 @@ func NewStore(opts ...StoreOption) *Store {
 
 // AutoMigrate auto migrate
 func (st *Store) AutoMigrate() {
-	store.db.Table(store.logTableName).AutoMigrate(&Log{})
+	st.db.Table(st.logTableName).AutoMigrate(&Log{})
 }
 
 // Log adds a log
