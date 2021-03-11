@@ -10,7 +10,7 @@ go get -u github.com/gouniverse/logstore
 ## Setup
 
 ```
-logStore = logstore.NewStore(metastore.WithGormDb(databaseInstance), metastore.WithTableName("log_meta"))
+logStore = logstore.NewStore(logstore.WithGormDb(databaseInstance), logstore.WithTableName("log_meta"), logstore.WithAutoMigrate(true))
 ```
 
 ## Usage
