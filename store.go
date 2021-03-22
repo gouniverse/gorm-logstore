@@ -79,6 +79,9 @@ func (st *Store) AutoMigrate() {
 
 // Log adds a log
 func (st *Store) Log(log *Log) bool {
+	if log.Time == nil{
+		log.Time = time.Now()
+	}
 
 	result := st.db.Table(st.logTableName).Create(&log)
 
