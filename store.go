@@ -11,7 +11,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type typetime time.Time
+type typetime *time.Time
 
 // Store defines a session store
 type Store struct {
