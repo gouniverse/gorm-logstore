@@ -30,7 +30,7 @@ type Log struct {
 	Level   string     `gorm:"type:varchar(10);column:type;"`
 	Message string     `gorm:"type:varchar(510);column:message;"`
 	Context string     `gorm:"type:longtext;column:context;"`
-	Time    *time.Time `gorm:"type:datetime;column:expires_at;DEFAULT NULL;"`
+	Time    *time.Time `gorm:"type:datetime;column:time;DEFAULT NULL;"`
 }
 
 // BeforeCreate adds UID to model
