@@ -11,8 +11,6 @@ import (
 	"gorm.io/gorm"
 )
 
-type typetime *time.Time
-
 // Store defines a session store
 type Store struct {
 	logTableName       string
@@ -83,7 +81,8 @@ func (st *Store) AutoMigrate() {
 // Log adds a log
 func (st *Store) Log(log *Log) bool {
 	if log.Time == nil{
-		log.Time = typetime(time.Now())
+		now := time.Now()
+		log.Time = &now
 	}
 
 	result := st.db.Table(st.logTableName).Create(&log)
