@@ -236,6 +236,8 @@ func Test_Store_ErrorWithContext(t *testing.T) {
 	}
 }
 
+// Fatal methods uses system level API to terminate program (os.Exit)
+/*
 func Test_Store_Fatal(t *testing.T) {
 	db, err := gorm.Open(sqlite.Open("test"), &gorm.Config{})
 	if err != nil {
@@ -275,6 +277,7 @@ func Test_Store_FatalWithContext(t *testing.T) {
 		t.Fatalf("Expected [true] received [%v]", b)
 	}
 }
+*/
 
 func Test_Store_Info(t *testing.T) {
 	db, err := gorm.Open(sqlite.Open("test"), &gorm.Config{})
